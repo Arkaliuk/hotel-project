@@ -1,4 +1,4 @@
-package com.model;
+package com.hotel.model;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -14,15 +14,11 @@ public class HotelRoom {
     @GeneratedValue
     private int id;
     @Column(name = "type_room")
+    @Enumerated(EnumType.STRING)
     private TypeRoom typeRoom;
     @Column(name = "class_room")
+    @Enumerated(EnumType.STRING)
     private ClassRoom classRoom;
-    @ManyToOne(fetch = FetchType.EAGER)
-    private Client client;
-    @Column(name = "check_in")
-    private LocalDate checkIn;
-    @Column(name = "check_out")
-    private LocalDate checkOut;
     @Column(name = "price")
     private int price;
 }
