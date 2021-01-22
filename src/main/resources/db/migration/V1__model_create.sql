@@ -5,17 +5,22 @@ CREATE table client
     last_name  varchar(100)
 );
 
-CREATE TYPE type AS ENUM ('SGL', 'DBL');
-CREATE TYPE class AS ENUM ('LUX', 'STANDARD','ECONOMY');
-
 CREATE table hotel_room
 (
     id         serial primary key,
-    type_room  type,
-    class_room class,
-    client_id  int references client (id),
-    check_in   date,
-    check_out  date,
+    type_room  varchar(20),
+    class_room varchar(20),
     price      int
 );
+
+create table reserve
+(
+    id            serial primary key,
+    client_id     int references client (id),
+    hotel_room_id int references hotel_room (id),
+    check_in      date,
+    check_out     date
+)
+
+
 

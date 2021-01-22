@@ -1,7 +1,8 @@
-package com.repository;
+package com.hotel.repository;
 
-import com.model.Client;
+import com.hotel.model.Client;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ClientRepository extends JpaRepository<Client, Integer> {
+//    @Query("select c from client")
 }
