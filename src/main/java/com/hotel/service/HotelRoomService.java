@@ -5,7 +5,6 @@ import com.hotel.model.HotelRoom;
 import com.hotel.model.TypeRoom;
 import com.hotel.repository.HotelRoomRepository;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
