@@ -32,7 +32,7 @@ public class ReserveController {
 
     @CrossOrigin
     @PostMapping()
-    public Reserve addReserve(@Valid @NotNull @RequestBody Reserve reserve) {
+    public Reserve addReserve(@Valid @NotNull @RequestBody Reserve reserve) throws Exception {
         return reserveService.check(reserve);
     }
 }
